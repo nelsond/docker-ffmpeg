@@ -5,9 +5,9 @@ MAINTAINER Nelson Darkwah Oppong "ndo@felixnelson.de"
 # from: https://trac.ffmpeg.org/wiki/CompilationGuide/Ubuntu
 
 RUN apt-get update && \
-    apt-get -y install wget autoconf automake build-essential libass-dev libgpac-dev \
+    apt-get -y install wget git-core autoconf automake build-essential libass-dev libgpac-dev \
       libsdl1.2-dev libtheora-dev libtool libva-dev libvdpau-dev libvorbis-dev libx11-dev \
-      libxext-dev libxfixes-dev pkg-config texi2html zlib1g-dev unzip libass-dev libmp3lame-dev
+      libxext-dev libxfixes-dev pkg-config texi2html zlib1g-dev unzip libass-dev libmp3lame-dev librtmp-dev
 
 RUN mkdir ~/ffmpeg_sources
 
@@ -82,6 +82,7 @@ RUN cd ~/ffmpeg_sources && \
       --enable-libvorbis \
       --enable-libvpx \
       --enable-libx264 \
+      --enable-librtmp \
       --enable-nonfree
 
 RUN cd ~/ffmpeg_sources/ffmpeg && \
