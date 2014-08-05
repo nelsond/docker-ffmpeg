@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:14.04
 
 MAINTAINER Nelson Darkwah Oppong "ndo@felixnelson.de"
 
