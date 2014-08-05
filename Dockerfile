@@ -83,9 +83,7 @@ RUN cd ~/ffmpeg_sources && \
       --enable-libvpx \
       --enable-libx264 \
       --enable-librtmp \
-      --enable-nonfree
-
-RUN cd ~/ffmpeg_sources/ffmpeg && \
+      --enable-nonfree && \
     PATH="$PATH:$HOME/bin" make && \
     make install && \
     make distclean && \
